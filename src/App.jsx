@@ -1,13 +1,33 @@
 import React from 'react'
+import Navbar from './Components/Navbar'
+import { Route, Routes } from 'react-router-dom'
+import Home from './Pages/Home'
+import Cart from './Pages/Cart'
 
 const App = () => {
   return (
-    <div>App</div>
+    <div className='w-screen h-full'>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/Cart' element={<Cart />} />
+      </Routes>
+    </div>
   )
 }
 
 export default App
 
+
+
+
+
+
+
+
+
+
+// how to import API data from repid API
 // import axios from "axios";
 // import { useEffect, useState } from "react";
 
