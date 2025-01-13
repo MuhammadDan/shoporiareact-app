@@ -2,7 +2,9 @@ import React from 'react'
 
 const Cart = () => {
   return (
-    <div>Cart</div>
+    <>
+    <div className='mt-16'>This is Cart Page</div>
+    </>
   )
 }
 

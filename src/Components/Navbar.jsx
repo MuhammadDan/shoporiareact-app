@@ -18,13 +18,14 @@ const Navbar = () => {
           />
           <h1 className="font-semibold text-xl cursor-pointer">Shopria</h1>
         </div>
-        <div className="hidden md:flex gap-10 items-center mr-40">
+        <div className="hidden md:flex gap-14 items-center mr-40">
           <NavLink className="md:text-lg" to="/">
             <h4>Home</h4>
           </NavLink>
           <NavLink className="md:text-lg" to="/cart">
             <FaShoppingCart />
           </NavLink>
+          <button className="bg-yellow-200 px-3 py-2 rounded-md">Login</button>
         </div>
         <div className="md:hidden">
           <button onClick={toggleMobileMenu} className="text-lg">
@@ -32,22 +33,16 @@ const Navbar = () => {
           </button>
         </div>
         {IsMobileMenuOpen && (
-          <div className="w-full flex flex-col items-center gap-2 mt-2 z-50 md:hidden">
+          <div className="absolute top-14 w-full mr-0 left-0 flex flex-col h-32 items-center gap-y-5 mt-2 z-50 bg-emerald-400  md:hidden">
             <NavLink
-              className="md:text-lg"
+              className="cursor-pointer text-lg hover:scale-105 duration-200"
               to="/"
-              smooth={true}
-              duration={500}
-              offset={-70}
             >
               <h4>Home</h4>
             </NavLink>
             <NavLink
-              className="md:text-lg"
+              className="cursor-pointer text-lg hover:scale-105 duration-200"
               to="/cart"
-              smooth={true}
-              duration={500}
-              offset={-70}
             >
               <FaShoppingCart />
             </NavLink>
