@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+
+import React, { useEffect, useState } from 'react';
 import banner1 from "../assets/banner1.jpg";
 import banner2 from "../assets/banner2.jpg";
 import banner3 from "../assets/banner3.jpg";
@@ -22,6 +23,15 @@ const SliderProduct = () => {
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
+    // automatic slide change
+    useEffect(() => {
+      const interval =setInterval(()=>{
+        setCurrentIndex((prevIndex)=>prevIndex === slides.length - 1 ? 0 : prevIndex + 1)
+      },3000);
+    
+      return () => clearInterval(interval);
+    }, [slides.length])
+    
 
     const handlePrev = () => {
         setCurrentIndex((prevIndex) => (prevIndex === 0 ? slides.length - 1 : prevIndex - 1));
