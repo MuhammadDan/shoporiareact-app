@@ -45,6 +45,7 @@ const Navbar = () => {
               to="/cart"
             >
               <FaShoppingCart />
+              {/* <span>{cart.length}</span> */}
             </NavLink>
           </div>
         )}

@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import banner1 from "../assets/banner1.jpg";
 import banner2 from "../assets/banner2.jpg";
@@ -45,8 +44,8 @@ const SliderProduct = () => {
    }
     return (
         <>
-        <div className='w-[1020px] mx-auto mt-20  px-4 relative'>
-            <div className='w-[1000px] bg-cover flex items-center justify-center'>
+        <div className='w-full md:w-[1020px] mx-auto mt-20  px-4 relative'>
+            <div className='md:w-[1000px] bg-cover flex items-center justify-center'>
                 <img
                     src={slides[currentIndex].pic}
                     alt={`Slide ${currentIndex + 1}`}
@@ -56,20 +55,22 @@ const SliderProduct = () => {
             {/* Navigation Buttons */}
             <button
                 onClick={handlePrev}
-                className='absolute top-1/2 left-4 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full'
+                className='absolute top-14 md:top-1/2 left-4 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full'
             >
                 &#8592;
             </button>
             <button
                 onClick={handleNext}
-                className='absolute top-1/2 right-4 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full'
+                className='absolute top-14 md:top-1/2 right-4 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full'
             >
                 &#8594;
             </button>
             <div className='flex  justify-center '>
            {
             slides.map((slide,slideindex)=>(
-                <div key={slideindex} onClick={()=>(goToSlide(slideindex))} className='text-2xl cursor-pointer'><RxDotFilled /></div>
+                <div key={slideindex} onClick={()=>(goToSlide(slideindex))} className={`text-2xl cursor-pointer ${
+                    currentIndex === slideindex ? "text-black-500" : "text-gray-500"
+                  } hover:text-blue-700`}><RxDotFilled /></div>
             ))
            }
             </div>

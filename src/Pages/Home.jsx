@@ -1,5 +1,6 @@
 import React from 'react'
 import SliderProduct from '../Components/SliderProduct'
+import Product from '../Components/Product'
 
 const Home = () => {
   return (
@@ -7,7 +8,7 @@ const Home = () => {
     <div className=''>
       
       <SliderProduct />
-      <h1>This is home page</h1>
+      <Product />
       </div>
     </>
   )

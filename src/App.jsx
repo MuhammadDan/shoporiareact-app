@@ -3,14 +3,16 @@ import Navbar from './Components/Navbar'
 import { Route, Routes } from 'react-router-dom'
 import Home from './Pages/Home'
 import Cart from './Pages/Cart'
+import Carditem from './Components/Carditem'
 
 const App = () => {
   return (
-    <div className='w-screen h-full'>
+    <div className=''>
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/Cart' element={<Cart />} />
+        <Route path="/Carditem" element={<Carditem />} />
       </Routes>
     </div>
   )
