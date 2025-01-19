@@ -1,9 +1,17 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { asyncgetproducts } from "../Store/actions/Cardaction";
 
 const Product = () => {
   // const {cart} = useSelector((state)=>state);
+  const {products} = useSelector((state)=>state.Cardreducer)
+  console.log(products); // yahan pai initialstate wali value dalo hamesha
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(asyncgetproducts());
+  }, [])
+  
   return (
     <div className="grid xs-gridcols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-6xl px-6 md:p-3 mx-auto space-y-10 space-x-5 min-h-[55vh]">
     <Link
