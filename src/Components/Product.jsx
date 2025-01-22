@@ -11,13 +11,14 @@ const Product = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(asyncgetproducts());
-  }, [])
+  }, [dispatch])
   
   return products ? (
       <div className="grid xs-gridcols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-6xl px-6 md:p-3 mx-auto space-y-10 space-x-5 min-h-[55vh]">
      {products.map((item,index)=>(
-      <Link key={index}
-        to="/Carditem"
+      <Link 
+        to={`/Carditem/${item.id}`}
+        key={item.id}
         className="flex flex-col items-center justify-center hover:scale-110 transition duration-300 ease-in gap-3 p-6  md:p-4 mt-10 md:ml-5 rounded-xl shadow md:shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
       >
         <div>
