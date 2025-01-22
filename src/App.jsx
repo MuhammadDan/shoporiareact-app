@@ -34,29 +34,20 @@ export default App
 // import { useEffect, useState } from "react";
 
 // const options = {
-//   method: "GET",
-//   url: "https://real-time-amazon-data.p.rapidapi.com/products-by-category",
-//   params: {
-//     category_id: "2478868012",
-//     page: "1",
-//     country: "US",
-//     sort_by: "RELEVANCE",
-//     product_condition: "ALL",
-//     is_prime: "false",
-//     deals_and_discounts: "NONE",
-//   },
+//   method: 'GET',
+//   url: 'https://ecommerce-api3.p.rapidapi.com/malefootwear',
 //   headers: {
-//     "x-rapidapi-key": "effeee6739msh22402ce7a65aabfp1468a3jsn8110955ff80a",
-//     "x-rapidapi-host": "real-time-amazon-data.p.rapidapi.com",
-//   },
+//     'x-rapidapi-key': 'effeee6739msh22402ce7a65aabfp1468a3jsn8110955ff80a',
+//     'x-rapidapi-host': 'ecommerce-api3.p.rapidapi.com'
+//   }
 // };
 // function App() {
 //   const [ecomerce, setecomerce] = useState(null)
 //   const callingfun = async()=>{
 //     try {
 //       const response = await axios.request(options);
-//      setecomerce(response.data.data.products)
-//       console.log(response.data.data.products);
+//       setecomerce(response.data)
+//       console.log(response.data);
 //     } catch (error) {
 //       console.error(error);
 //     }
