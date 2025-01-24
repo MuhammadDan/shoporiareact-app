@@ -2,11 +2,15 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Logo1 from "../assets/Logo1.jpg";
 import { FaShoppingCart } from "react-icons/fa";
+import { useSelector } from "react-redux";
 const Navbar = () => {
   const [IsMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!IsMobileMenuOpen);
   };
+  const {products} = useSelector((state)=>state.Cardreducer);
+  console.log(products.length);
+  
   return (
     <>
       <nav className="flex flex-wrap items-center justify-between h-16 shadow-md px-5 md:px-10 fixed top-0 left-0 right-0 z-50 bg-emerald-400">
@@ -23,6 +27,7 @@ const Navbar = () => {
             <h4>Home</h4>
           </NavLink>
           <NavLink className="md:text-lg" to="/cart">
+          <div>{products.length}</div>
             <FaShoppingCart />
           </NavLink>
           <button className="bg-yellow-200 px-3 py-2 rounded-md">Login</button>

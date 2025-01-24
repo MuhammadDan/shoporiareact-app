@@ -1,17 +1,16 @@
 import axios from "axios";
 import { getproducts } from "../reducers/Cardreducer";
 
-
-
-export const asyncgetproducts = () => async (dispatch, getstate) => {
+export const asyncgetproducts = () => async (dispatch) => {
   try {
-    const response = await axios.request('https://dummyjson.com/products');
-    dispatch(getproducts(response.data.products))
+    const response = await axios.get("https://dummyjson.com/products");
+    dispatch(getproducts(response.data.products)); // Update only fetched products
     console.log(response.data.products);
   } catch (error) {
-    console.error(error);
+    console.error("Error fetching products:", error);
   }
 };
+
 
 
 

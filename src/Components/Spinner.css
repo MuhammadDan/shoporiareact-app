@@ -15,7 +15,7 @@
     content:"Loading...";
   }
   
-  @keyframes l18 {
+  @keyframes l22 {
      0% {text-shadow: 
           calc(  9*var(--w)) 0 #000,calc( -1*var(--w)) 0 #000,calc(-11*var(--w)) 0 #000,calc(-21*var(--w)) 0 #000,calc(-31*var(--w)) 0 #000, 
           calc(-41*var(--w)) 0 #000,calc(-51*var(--w)) 0 #000,calc(-61*var(--w)) 0 #000,calc(-71*var(--w)) 0 #000,calc(-81*var(--w)) 0 #000}
