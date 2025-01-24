@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import banner1 from "../assets/banner1.jpg";
 import banner2 from "../assets/banner2.jpg";
-import banner3 from "../assets/banner3.jpg";
-import banner4 from "../assets/banner4.jpg";
-import banner5 from "../assets/banner5.jpg";
+import banner3 from "../assets/Banner3.jpg";
+import banner4 from "../assets/Banner4.jpg";
+import banner5 from "../assets/Banner5.jpg";
 import electronics_banner_1 from "../assets/electronics-banner-1.jpg";
 import mens_banner from "../assets/mens-banner.jpg";
 import womens_banner from "../assets/womens-banner.jpg";
